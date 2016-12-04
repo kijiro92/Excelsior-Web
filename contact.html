@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+<head>
+
+        <title>Contact Info</title>
+
+        <meta NAME=author CONTENT="Steven Wingrove">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="styles.css">
+
+        <script type="text/javascript">
+
+            function validate(form) {
+                // debugger;
+                var returnValue = true;
+                var fname = form.fname.value;
+                var lname = form.lname.value;
+                var email = form.email.value;
+                var phone = form.telephonenumber.value;
+                var radio = form.gender.value;
+                var checkbox = form.sportsinterests.value;
+                var dropdown = form.contact.value;
+
+                if (fname.length < 1) {
+                    returnValue = false;
+                    alert("You must input your first name");
+                    myForm.fname.focus();
+                    return false;
+                }
+                if (lname == "") {
+                    returnValue = false;
+                    alert("You must input your last name");
+                    myForm.lname.focus();
+                    return false;
+                }
+                if (email == "") {
+                    returnValue = false;
+                    alert("You must input a valid email address");
+                    myForm.email.focus();
+                    return false;
+                }
+                if (telephonenumber == "") {
+                    returnValue = false;
+                    alert("You must enter a valid phone number");
+                    myForm.telephonenumber.focus();
+                    return false;
+                }
+                while (!returnValue && i < sportsinterests.length) {
+                    returnValue = false;
+                    alert("You must choose a sport");
+                    myForm.sportsinterests.focus();
+                    return false;
+
+                }
+                while (!returnValue && i < genders.length) {
+                    alert("Please indicate a gender");
+                    myForm.gender.focus();
+                    return false;
+                }
+            }
+
+        </script>
+
+</head>
+
+<body>
+
+    <div class="bar">
+
+        <ul>
+
+            <li> <a href="index.html">Home</a></li>
+
+            <li> <a href="page2.html">Bio</a></li>
+
+            <li> <a href="contact.html">Contact</a></li>
+
+            <li> <a href="resume.html">Resume</a></li>
+
+        </ul>
+    </div>
+
+    <div class="intro">
+
+
+        <h1>Hello</h1>
+
+        <h3>My name is...</h3>
+
+    </div>
+
+    <div class="sign">
+
+        <img src=Steve.png alt="Smiley face">
+
+    </div>
+    <div class="contPage">
+
+
+
+    </div>
+
+    <div class="explain">
+
+        <form name="myForm" method="get" onsubmit="return validate(this);">
+
+            <div class="contactPage">
+
+                    <input type="text" name="fname" id="fname" placeholder="first"
+                    class="contact"></input><br>
+
+                    <input type="text" name="lname" id="lname" placeholder="last" class="contact"></input><br>
+
+                    <input type="radio" name="gender" id="gender" value="Male">male</input><br>
+
+                    <input type="radio" name="gender" id="gender" value="Female">female</input><br>
+
+                    <input type="radio" name="gender" id="gender" value="Other">other</input><br>
+
+                    <input type="email" name="email" id="email" placeholder="email" class="contact"></input><br>
+
+                    <input type="number" name="telephonenumber" id="telephonenumber" placeholder="phone" class="contact"></input><br>
+                    favorite sport<br>
+
+                    <input type="checkbox" name="sportsinterests" id="football" value="Football">Football</input><br>
+
+                    <input type="checkbox" name="sportsinterests" id="basketball" value="Basketball">Basketball</input><br>
+
+                    <input type="checkbox" name="sportsinterests" id="baseball" value="Baseball">Baseball</input><br>
+
+                    <input type="checkbox" name="sportsinterests" id="soccer" value="Soccer">Soccer</input><br>
+
+                    <div class="dropdown">
+
+                    <select name="contact">
+
+                        <option value="Preferred Contact Times">Preferred Contact Times</option>
+
+                        <option value="Anytime">Anytime</option>
+
+                        <option value="Morning">Morning</option>
+
+                        <option value="Afternoon">Afternoon</option>
+
+                        <option value="Evening">Evening</option>
+
+                    </select>
+
+            </div><br>
+
+            <textarea name="comments" rows="10" cols="50" placeholder="comments"></textarea><br>
+
+            <input type="submit" value="submit">
+
+        </form>
+    <table class="table">
+
+            <tr>
+
+                <th>Contact info</th>
+
+            </tr>
+
+            <tr>
+
+                <td>Steven Wingrove</td>
+
+            </tr>
+
+            <tr>
+
+                <td><a href="mailto:kijiro.92@mac.com?Subject=Your%20website" target="_top">kijiro.92@mac.com</a></td>
+
+            </tr>
+
+        </table>
+
+
+        <div>
+            <img src="Me.jpg" alt="Smiley face">
+        </div>
+
+    </div>
+
+</body>
